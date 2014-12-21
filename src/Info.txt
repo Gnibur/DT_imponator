@@ -1,0 +1,46 @@
+Useful information: 
+*	Uses the Atxmega256a3u/Atxmega128a3u:
+	Datasheet: http://www.atmel.com/devices/atxmega256a3u.aspx
+*	16 RGB-leds, where 8 and 8 are multiplexed.
+* 	Each led is controlled by 3 lines, thus 3*8=24 lines.
+
+Main target: 
+*	Be able to control each led individually,
+	both colour and brightness.
+
+Implementation problem:
+*	Only 8 leds can be turned at the same time, 
+	else it will draw to much current.
+*	Solving this using multiple timer interrupt requires
+	timer synchronisation. All timers should be synchronized
+	with the multiplexer
+
+
+General timer information:
+*	xMega timer application note: http://www.atmel.com/Images/doc8045.pdf
+
+*	Timer0:
+	* 4 16-bit timers connected to port C, D, E, and F.
+	* Each timer has 4 compare channels
+	* 2 and two timers can be combined to a 32-bit timer using timer overflow
+	  event as input to another timer.
+
+*	Timer1:
+	* 3 16-bit timers connected to port C, D, and E.
+	* Each timer has 2 compare channels 
+
+*	Timer2:	
+	* Created when a timer0 is set into split mode, yields 8 8-bit timers.
+	* 4 of them are low-byte, and 4 are high-byte timers. 
+	* The low- and high-byte timer share the same prescaler output
+	* Each timer has 4 compare channels.
+	* Only the low-byte timers can create a compare match interrupt.
+	* Will automatically set a waveform on the output.
+	* Counts downward.
+
+
+
+
+
+
+

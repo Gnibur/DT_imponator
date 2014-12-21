@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Imponator", "Imponator\Imponator.cppproj", "{DED75FE3-D721-4BB8-99B8-2A08BCBF5C00}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DED75FE3-D721-4BB8-99B8-2A08BCBF5C00}.Debug|AVR.ActiveCfg = Debug|AVR
+		{DED75FE3-D721-4BB8-99B8-2A08BCBF5C00}.Debug|AVR.Build.0 = Debug|AVR
+		{DED75FE3-D721-4BB8-99B8-2A08BCBF5C00}.Release|AVR.ActiveCfg = Release|AVR
+		{DED75FE3-D721-4BB8-99B8-2A08BCBF5C00}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
